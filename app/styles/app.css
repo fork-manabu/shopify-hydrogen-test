@@ -33,3 +33,9 @@ p {
   font-size: 1rem;
   line-height: 1.4;
 }
+
+.c-header,.c-footer{
+  background-color: rgb(218, 236, 249);
+}
+
+

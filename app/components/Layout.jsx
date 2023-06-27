@@ -5,6 +5,7 @@ import {useMatches} from '@remix-run/react';
 import {CartLineItems, CartActions, CartSummary} from '~/components/Cart';
 import {useFetchers} from '@remix-run/react';
 import {useEffect} from 'react';
+import Footer from '~/components/Footer'
 
 function CartHeader({cart, openDrawer}) {
   return (
@@ -100,7 +101,7 @@ export function Layout({children, title}) {
     <div className="flex flex-col min-h-screen antialiased bg-neutral-50">
       <header
         role="banner"
-        className={`flex items-center h-16 p-6 md:p-8 lg:p-12 sticky backdrop-blur-lg z-40 top-0 justify-between w-full leading-none gap-4 antialiased transition shadow-sm`}
+        className={`c-header flex items-center h-16 p-6 md:p-8 lg:p-12 sticky backdrop-blur-lg z-40 top-0 justify-between w-full leading-none gap-4 antialiased transition shadow-sm`}
       >
         <div className="flex gap-12 w-full items-center">
           <a className="font-bold" href="/">
@@ -116,6 +117,7 @@ export function Layout({children, title}) {
       >
         {children}
       </main>
+      <Footer></Footer>
       <Drawer open={isOpen} onClose={closeDrawer}>
         <CartDrawer cart={cart} close={closeDrawer} />
       </Drawer>
